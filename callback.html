@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>OAuth Callback</title></head>
+<body>
+<h1>Authorization Complete</h1>
+<p>Copy the code from the URL bar and paste it into your terminal.</p>
+<script>
+const params = new URLSearchParams(window.location.search);
+const code = params.get('code');
+if (code) {
+  document.body.innerHTML = '<h1>Your auth code:</h1><p style="font-size:24px;font-weight:bold;">' + code + '</p><p>Copy this code and paste it into your Python script.</p>';
+}
+</script>
+</body>
+</html>
